@@ -2,7 +2,7 @@
 Basic commands used in Docker with Ubuntu OS.
 ###############################################
 
-In Ubuntu either you have to use ‘sudo’ before each command you run in Ubuntu or you can switch to root user by using ‘sudo -s’ (it will ask for the primary user’s password, when you add this you will be using the terminal as a root user).
+In Ubuntu either you have to use â€˜sudoâ€™ before each command you run in Ubuntu or you can switch to root user by using â€˜sudo -sâ€™ (it will ask for the primary userâ€™s password, when you add this you will be using the terminal as a root user).
 
 #installing Docker in Ubuntu
 #updating the repo
