@@ -1,0 +1,18 @@
+To successfully run the DockerFile, follow the instructions below.
+
+1. install Docker on Ubuntu(as mentioned in Read.md)
+2. Create a directory named Dockertest, copy Dockerfile and hello.js files in the same directory.
+3. Run DockerFile build(command mentioned in Read.md)
+4. When the docker build files executes successfully it will show the mentioned status below.
+
+Step 11/11 : RUN ./hello.js
+ ---> Running in a2f6fb8bf52d
+Server running at http://localhost:8000/
+
+5. Open another terminal and execute "docker ps -a"
+6. Copy the recent Container ID.
+7. Execute "docker exec -it <recent Container ID> bash" to get into running Container.
+8. Run "curl http://localhost:8000". You will be showed the content of the hosted site like mentioned below.
+
+root@bbdeb8fab105:/# curl http://localhost:8000
+Hello World

@@ -1,0 +1,32 @@
+#Installing Ubuntu:16.04
+From ubuntu:16.04
+
+#Details of the maintainer
+MAINTAINER cyrilsebastian “cyrilsebastian01@gmail.com”
+
+#Update Ubuntu repository
+RUN apt-get update
+
+#installing Curl
+RUN apt-get install -y curl
+
+#PPA will be added to the local cache repo
+CMD [ “bash”, “nodesource_setup.sh”]
+
+#Installing nodejs
+RUN apt-get install -y nodejs
+
+#Installing dependencies
+RUN apt-get install -y build-essential
+
+#Copying the nodejs file configuration file
+COPY hello.js /
+
+#giving executable privileges
+RUN chmod +x ./hello.js
+
+#adding the port number for nodejs webserver
+EXPOSE 8000
+
+#runs the node server until we kill it open the 
+RUN ./hello.js
